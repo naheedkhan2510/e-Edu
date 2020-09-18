@@ -2,7 +2,13 @@
 
 @section('content')
 
-<h1>Enjoy Learning</h1>
+<header class="jumbotron">
+  <div class="container">
+    <div class="row row-header">
+      <h1>Enjoy Learning</h1>
+    </div>
+  </div> 
+</header>
 
 
 @foreach($data as $data)
@@ -13,14 +19,14 @@
 <section>
       <nav id="video_view">
         <ul>
-          <li><input type="button" value="Video1" onclick="myFunction()" class="btn btn-success"><i class="fa fa-play" aria-hidden="true"></i></li></input></br>
-          <li><input type="button" value="Video2" onclick="myvideo()" class="btn btn-success"><i class="fa fa-play" aria-hidden="true"></i></li></br>
-          <li><input type="button" value="Video3" onclick="myvideo1()" class="btn btn-success"><i class="fa fa-play" aria-hidden="true"></i></li></br>
+          <li><input type="button" value="Video1" onclick="myFunction()" class="btn btn-success btn-lg"><i class="fa fa-play" aria-hidden="true"></i></li></input></br>
+          <li><input type="button" value="Video2" onclick="myvideo()" class="btn btn-success btn-lg"><i class="fa fa-play" aria-hidden="true"></i></li></br>
+          <li><input type="button" value="Video3" onclick="myvideo1()" class="btn btn-success btn-lg"><i class="fa fa-play" aria-hidden="true"></i></li></br>
         </ul>
       </nav>
 
   <article>
-      <video src="app/public/poster.jpg" id="video" width="900px" height ="450px" alt="Welcome" controls></video>
+    <video src="app/public/poster.jpg" class="embed-responsive-item" id="video" width="82.5%" height ="480px" alt="Welcome" controls="controls"></video>
   </article>
 
 </section>
@@ -28,21 +34,28 @@
 
 
 <div id="abc">
-<div id="time"></div>
-<div class="form-group">
-<i class="fa fa-question-circle-o" aria-hidden="true"></i> <label for="question_label">Question</label>
-<input type="text" class="form-control" id="question" name="questionans" value="" readonly></div>
-<div class="form-group">
-<i class="fa fa-check-square-o" aria-hidden="true"></i> <label for="option">Select your choice</label>
-<select class="custom-select custom-select-md mb-3" id="select1" name="choice" required>
-<option value="" selected>Select answer</option>
-<option value="" id="ans1"></option>
-<option value="" id="ans2"></option>
-<option value="" id="ans3"></option>
-<option value="" id="ans4"></option>
-</select>
-</div>
-<input type="button" value="submit" class="btn btn-success" onclick="submit()">
+  <div id="time"></div>
+
+<div class="container">
+  <div  class="form-row">
+    <div class="form-group col-12">
+      <i class="fa fa-question-circle-o" aria-hidden="true"></i> <label for="question_label">Question</label>
+      <input type="text" class="form-control" id="question" name="questionans" value="" readonly>
+    </div>
+    <div class="form-group col-12 ">
+      <i class="fa fa-check-square-o" aria-hidden="true"></i> <label for="option">Select your choice</label>
+      <select class="custom-select custom-select-md mb-3" id="select1" name="choice" required>
+      <option value="" selected>Select answer</option>
+      <option value="" id="ans1"></option>
+      <option value="" id="ans2"></option>
+      <option value="" id="ans3"></option>
+      <option value="" id="ans4"></option>
+      </select>
+    </div>
+  </div>
+    <div class = "form-group col-12 ">
+      <input type="button" value="submit" class="btn btn-success btn-lg " onclick="submit()">
+    </div>
 </div>
 
 <span class="output"></span> 
